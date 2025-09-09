@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Kartik's Blog Platform</h1>
+
+    <!-- Auth Section -->
+    <div id="auth-section">
+      <h2>Login / Register</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="register()">Register</button>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" style="display: none;">
+      <h2>Welcome, <span id="currentUser"></span>!</h2>
+      <button onclick="logout()">Logout</button>
+
+      <!-- Create Post -->
+      <div class="create-post">
+        <h3>Create Post</h3>
+        <input type="text" id="post-title" placeholder="Post Title">
+        <textarea id="post-content" placeholder="Write something..."></textarea>
+        <button onclick="createPost()">Publish</button>
+      </div>
+
+      <!-- Profile Section -->
+    <div id="profile-section" style="display:none; margin-top:20px;">
+        <h3>Profile: <span id="profile-user"></span></h3>
+        <button onclick="closeProfile()">Close Profile</button>
+        <div id="profile-posts"></div>
+    </div>
+
+
+      <!-- Posts -->
+      <div class="posts">
+        <h3>All Posts</h3>
+        <div id="post-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
